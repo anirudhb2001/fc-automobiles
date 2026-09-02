@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-27 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle",
+  "vehicle_number",
+  "vehicle_type",
+  "make",
+  "model",
+  "year",
+  "active"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle",
+   "options": "Vehicle Master",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle.vehicle_number",
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vehicle Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.vehicle_type",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vehicle Type",
+   "options": "2 Wheeler\n3 Wheeler\n4 Wheeler",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.make",
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Make",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.model",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.year",
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Year",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.active",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fc Automobiles",
+ "name": "Customer Vehicle Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

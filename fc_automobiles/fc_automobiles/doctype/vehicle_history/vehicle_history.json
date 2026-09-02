@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-08-27 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle",
+  "event_date",
+  "event_type",
+  "column_break_1",
+  "km",
+  "source",
+  "details_section",
+  "details",
+  "reference_section",
+  "reference_doctype",
+  "reference_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle",
+   "options": "Vehicle Master",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "event_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Event Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Event Type",
+   "options": "Created\nOwnership Changed\nActivated\nDeactivated\nOdometer Reading\nOther",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Odometer reading at the time of this event, if known.",
+   "fieldname": "km",
+   "fieldtype": "Int",
+   "label": "KM",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "description": "Which app/module logged this event, e.g. fc_automobiles, tyre_management, global_tyres.",
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Source",
+   "read_only": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Small Text",
+   "label": "Details",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "description": "Optional back-reference to the document (in any app) that generated this event - e.g. a Service Job Card or a Tyre History row. fc_automobiles never validates or depends on this doctype existing.",
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference DocType",
+   "options": "DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_doctype",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fc Automobiles",
+ "name": "Vehicle History",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

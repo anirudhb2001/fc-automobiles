@@ -1,0 +1,21 @@
+[
+ {
+  "doctype": "Custom Field",
+  "dt": "Customer",
+  "fieldname": "fc_automobiles_vehicles_section",
+  "fieldtype": "Section Break",
+  "insert_after": "mobile_no",
+  "label": "Vehicles",
+  "name": "Customer-fc_automobiles_vehicles_section"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Customer",
+  "fieldname": "fc_vehicles",
+  "fieldtype": "Table",
+  "insert_after": "fc_automobiles_vehicles_section",
+  "label": "Vehicles",
+  "name": "Customer-fc_vehicles",
+  "options": "Customer Vehicle Link"
+ }
+]

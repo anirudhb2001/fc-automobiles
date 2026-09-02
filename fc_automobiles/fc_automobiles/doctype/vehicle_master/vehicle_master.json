@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:vehicle_number",
+ "creation": "2026-08-27 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_number",
+  "customer",
+  "column_break_1",
+  "vehicle_type",
+  "active",
+  "section_break_1",
+  "make",
+  "model",
+  "column_break_2",
+  "year",
+  "notes",
+  "service_history_section",
+  "service_history_html"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vehicle Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle Type",
+   "options": "2 Wheeler\n3 Wheeler\n4 Wheeler",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Details"
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Link",
+   "label": "Make",
+   "options": "Vehicle Make",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Link",
+   "label": "Model",
+   "options": "Vehicle Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "service_history_section",
+   "fieldtype": "Section Break",
+   "label": "Service History"
+  },
+  {
+   "fieldname": "service_history_html",
+   "fieldtype": "HTML",
+   "label": "Service History HTML"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-27 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fc Automobiles",
+ "name": "Vehicle Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

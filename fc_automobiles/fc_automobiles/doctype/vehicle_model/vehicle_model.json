@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{make}-{model_name}",
+ "creation": "2026-08-27 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "make",
+  "model_name",
+  "vehicle_type",
+  "column_break_1",
+  "active"
+ ],
+ "fields": [
+  {
+   "fieldname": "make",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Make",
+   "options": "Vehicle Make",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle Type",
+   "options": "2 Wheeler\n3 Wheeler\n4 Wheeler",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-01 15:34:39.442686",
+ "modified_by": "Administrator",
+ "module": "Fc Automobiles",
+ "name": "Vehicle Model",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "model_name"
+}
