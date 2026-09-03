@@ -3,9 +3,17 @@ frappe.ui.form.on('Vehicle Master', {
 		set_make_query(frm);
 		set_model_query(frm);
 
-		if (frm.is_new()) return;
-
 		if (!frm.fields_dict.service_history_html) return;
+
+		if (frm.is_new()) {
+			// Frappe reuses the same form DOM across documents of this
+			// doctype - without this, navigating here from an existing
+			// Vehicle Master (which had real service history rendered into
+			// this same wrapper) leaves that stale content visible on the
+			// new, blank record instead of showing nothing.
+			$(frm.fields_dict.service_history_html.wrapper).empty();
+			return;
+		}
 
 		render_service_history(frm);
 	},
